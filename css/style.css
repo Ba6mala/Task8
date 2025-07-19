@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: "Alegreya", serif;
 }
 
 .container {
@@ -8,18 +9,17 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 1300px;
 }
 
 /* Start header  */
 header {
     background-image: url(../images/drew-coffman-1872.jpg);
     background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
 nav {
-    background-color: #fff;
     padding: 10px;
 }
 
@@ -30,7 +30,7 @@ nav .container {
 }
 
 nav img {
-    width: 150px;
+    width: 200px;
 }
 
 nav ul {
@@ -42,12 +42,17 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: black;
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
+    transition: 1s;
+}
+
+nav a:hover {
+    color: #8E7754;
 }
 
 header .text {
-    margin-top: 300px;
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,15 +64,17 @@ header .text {
 h2 , p {
     margin: 0;
     padding: 0;
+    font-weight: lighter;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 70px;
 }
 
 header .text p {
     width: 600px;
     font-size: 20px;
+    /* word-wrap: normal; */
 }
 
 .btns {
@@ -78,41 +85,85 @@ header .text p {
     color: #fff;
     border: 2px solid #fff;
     border-radius: 5px;
-    padding: 13px 20px;
+    padding: 15px 23px;
     text-decoration: none;
+    font-size: 18px;
     margin-left: 10px;
+    transition: 1s;
 }
 
 .btn1 {
     background-color: #8E7754;
     border: none;
 }
+
+.btn2:hover , .btn1:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        background-color: #7f7e7e;
+    }
+
+    nav .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    header .text p {
+        width: 100%;
+        word-wrap: break-word;
+        font-size: 20px;
+    }
+
+    header .text {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }   
+}
 /* End header  */
-
-
+/* Start Section1 */
 .section1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .section1 img {
-    width: 450px;
-    margin-top: 20px;
+    width: 32%;
 }
 
-h3 {
-    font-size: 35px;
+.section1 h3 , .section2 h3 {
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .section1 p {
-    width: 521px;
-    font-size: 25px;
+    width: 630px;
+    font-size: 18px;
     line-height: 1.4;
-    color: #767676;
+    color: #939292;
     margin-bottom: 35px;
 }
 
@@ -127,10 +178,10 @@ h3 {
 }
 
 .icon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     padding: 8px;
-    border: 2px solid #767676;
+    border: 1px solid #939292;
     border-radius: 50%;
     text-align: center;
 }
@@ -139,6 +190,63 @@ i {
     color: #8E7754;
     text-align: center;
     margin-top: 3px;
-    font-size: 20px;
 }
 
+@media (max-width: 1000px) {
+    .section1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section1 p {
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .section1 img {
+        width: 60%;
+    }
+}
+/* End Section1 */
+/* Start Section2 */
+.section2 {
+    background-color: #f8f8f8;
+}
+
+.section2 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section2 img {
+    width: 32%;
+}
+
+.section2 p {
+    width: 630px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #7d7d7d;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .section2 .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section2 p {
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .section2 img {
+        width: 60%;
+    }
+}
+/* End Section2 */
